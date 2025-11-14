@@ -1,0 +1,9 @@
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT DISTINCT ?property
+WHERE {
+  SERVICE <https://dbpedia.org/sparql> {
+    dbr:Lionel_Messi ?property ?value .
+  }
+}
+ORDER BY ?property

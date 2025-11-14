@@ -1,0 +1,35 @@
+BASE <http://example.org/football/>
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  ?player rdf:type ex:Footballer ;
+          dbo:NationalTeam ?team ;
+          dbo:birthDate ?birthDate ;
+          dbo:birthPlace ?birthPlace ;
+          
+          dbo:position ?position ;
+          dbo:deathDate ?deathDate ;
+          dbo:team ?clubs ;
+          dbo:deathPlace ?deathPlace .
+}
+WHERE {
+  ?player rdf:type ex:Footballer .
+  ?player dbo:NationalTeam ?team .
+
+  BIND(IRI(CONCAT("http://dbpedia.org/resource/", STRAFTER(STR(?player), "football/"))) AS ?dbpPlayer)
+
+  SERVICE <https://dbpedia.org/sparql> {
+    OPTIONAL { ?dbpPlayer dbo:birthDate ?birthDate . }
+    OPTIONAL { ?dbpPlayer dbo:birthPlace ?birthPlace . }
+    OPTIONAL { ?dbpPlayer dbo:position ?position . }
+    OPTIONAL { ?dbpPlayer dbo:deathDate ?deathDate . }
+    OPTIONAL { ?dbpPlayer dbo:deathPlace ?deathPlace . }
+    OPTIONAL { ?dbpPlayer dbo:team ?clubs . }
+  }
+} 
+

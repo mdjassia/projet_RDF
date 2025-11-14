@@ -1,0 +1,36 @@
+
+BASE <http://example.org/football/>
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?match rdf:type ex:Match ;
+  dbo:date ?date ;
+  dbo:homeTeam ?homeTeam ;
+  dbo:awayTeam ?awayTeam ;
+  dbo:tournament ?tournament ;
+  dbo:homeScore ?home_score ;
+  dbo:awayScore ?away_score ;
+  ex:winner ?winner ;
+  dbo:country ?country .
+
+ 
+ 
+  
+}
+WHERE {
+  BIND(IRI(CONCAT("http://example.org/football/Match_", ?date, "_", REPLACE(?home_team, " ", "_"), "_", REPLACE(?away_team, " ", "_"))) AS ?match)
+ BIND(IRI(CONCAT("http://example.org/football/", REPLACE(?home_team, " ", "_"))) AS ?homeTeam)
+  BIND(IRI(CONCAT("http://example.org/football/", REPLACE(?away_team, " ", "_"))) AS ?awayTeam)
+  BIND(xsd:string(?tournament) AS ?tournament)
+  BIND(xsd:string(?date) AS ?date)
+  BIND(xsd:string(?home_score) AS ?home_score)
+  BIND(xsd:string(?away_score) AS ?away_score)
+  BIND(IF(?home_score > ?away_score, ?homeTeam,
+          IF(?away_score > ?home_score, ?awayTeam, "Draw")) AS ?winner)
+  BIND(xsd:string(?country) AS ?country) 
+}
+
+tarql queries/extract_match.rq data/results.csv > schema/match.ttl

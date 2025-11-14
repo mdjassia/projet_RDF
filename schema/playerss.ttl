@@ -1,0 +1,742 @@
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX dbp:  <http://dbpedia.org/property/>
+PREFIX dbr:  <http://dbpedia.org/resource/>
+PREFIX ex:   <http://example.org/football/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ex:Alessio_Romagnoli  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Italy_national_football_team;
+        dbo:birthDate     "1995-01-12"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Anzio , dbr:Italy_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Italy_national_under-16_football_team , dbr:Italy_national_under-19_football_team , dbr:Italy_national_under-17_football_team , dbr:UC_Sampdoria , dbr:AC_Milan , dbr:SS_Lazio , dbr:AS_Roma .
+
+ex:Toshiya_Fujita  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Japan_national_football_team;
+        dbo:birthDate     "1971-10-04"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Japan_national_football_team , dbr:Shizuoka_Prefecture , <http://dbpedia.org/resource/Shizuoka_(city)>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Roasso_Kumamoto , dbr:FC_Utrecht , dbr:Shimizu_Commercial_High_School , dbr:Júbilo_Iwata , dbr:Japan_national_football_team , dbr:JEF_United_Chiba , dbr:Nagoya_Grampus .
+
+ex:Taylor_Twellman  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:United_States_national_football_team;
+        dbo:birthDate     "1980-02-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Minnesota , dbr:Minneapolis;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/United_States_men's_national_under-17_soccer_team> , <http://dbpedia.org/resource/United_States_men's_national_under-20_soccer_team> , dbr:TSV_1860_Munich_II , dbr:New_England_Revolution , <http://dbpedia.org/resource/United_States_men's_national_soccer_team> .
+
+ex:Tatsuhiko_Kubo  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Japan_national_football_team;
+        dbo:birthDate     "1976-06-18"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Japan_national_football_team , <http://dbpedia.org/resource/Chikuzen,_Fukuoka>;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Yokohama_F._Marinos , dbr:Zweigen_Kanazawa , dbr:Japan_national_football_team , dbr:Yokohama_FC , dbr:Sanfrecce_Hiroshima .
+
+ex:Taavi_Rähn  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:England_national_football_team;
+        dbo:birthDate     "1981-05-16"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Estonia_national_football_team , dbr:Pärnu;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Pärnu_JK_Vaprus , dbr:Pärnu_JK , dbr:KEK_Pärnu , dbr:Estonia_national_youth_football_team , dbr:Estonia_national_under-19_football_team , dbr:Pärnu_JK_Tervis , dbr:FC_Flora , dbr:FC_Baltika_Kaliningrad , dbr:Neftçi_PFK , dbr:FF_Jaro , dbr:FK_Ekranas , dbr:FCI_Levadia_Tallinn , <http://dbpedia.org/resource/Hunan_Billows_F.C.> , <http://dbpedia.org/resource/Tianjin_Tianhai_F.C.> , dbr:Paide_Linnameeskond , dbr:Viljandi_JK_Tulevik , dbr:FC_Volyn_Lutsk , dbr:Estonia_national_under-17_football_team .
+
+ex:Sibusiso_Zuma  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:South_Africa_national_football_team;
+        dbo:birthDate     "1975-06-23"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Durban , dbr:South_Africa_national_soccer_team;
+        dbo:position      dbr:Midfielder , <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Vasco_da_Gama_(South_Africa)> , <http://dbpedia.org/resource/Orlando_Pirates_F.C.> , <http://dbpedia.org/resource/SuperSport_United_F.C.> , dbr:Arminia_Bielefeld , dbr:FC_Nordsjælland , dbr:F.C._Copenhagen , dbr:South_Africa_national_soccer_team , <http://dbpedia.org/resource/African_Wanderers_F.C.> , <http://dbpedia.org/resource/Mamelodi_Sundowns_F.C.> .
+
+ex:Sargis_Hovsepyan  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Armenia_national_football_team;
+        dbo:birthDate     "1972-11-02"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Soviet_Union , dbr:Yerevan , dbr:Armenian_Soviet_Socialist_Republic;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Lori_Vanadzor , dbr:FC_Malatia , dbr:FC_Zenit_Saint_Petersburg , dbr:Armenia_national_football_team , dbr:FC_Moscow , dbr:FC_Pyunik .
+
+ex:Rui_Barros  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:Portugal_national_football_team;
+        dbo:birthDate     "1965-11-24"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Paredes,_Portugal>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          <http://dbpedia.org/resource/Rebordosa_A.C.> , <http://dbpedia.org/resource/Aliados_Lordelo_F.C.> , dbr:F.C._Paços_de_Ferreira , dbr:AS_Monaco_FC , dbr:S.C._Covilhã , dbr:FC_Porto , dbr:Olympique_de_Marseille , dbr:Juventus_FC , dbr:Portugal_national_football_team , <http://dbpedia.org/resource/Varzim_S.C.> .
+
+ex:Rudi_Vata  rdf:type    ex:Footballer;
+        dbo:NationalTeam  ex:Albania_national_football_team;
+        dbo:birthDate     "1969-02-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/People's_Socialist_Republic_of_Albania> , dbr:Shkodër;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:SK_Tirana , <http://dbpedia.org/resource/Celtic_F.C.> , dbr:FC_Dinamo_City , dbr:Yokohama_FC , <http://dbpedia.org/resource/St_Johnstone_F.C.> , dbr:FC_Energie_Cottbus , dbr:Le_Mans_FC , dbr:Tours_FC , dbr:KF_Vllaznia_Shkodër , dbr:Apollon_Limassol_FC , dbr:Albania_national_football_team , dbr:FK_Partizani_Tirana , dbr:Rot_Weiss_Ahlen .
+
+ex:Roy_Krishna  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Fiji_national_football_team;
+        dbo:birthDate     "1987-08-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Labasa , dbr:Fiji_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Labasa_F.C.> , dbr:Fiji_national_football_team , dbr:Auckland_City_FC , dbr:Bengaluru_FC , dbr:Waitakere_United , dbr:Odisha_FC , dbr:Wellington_Phoenix_FC , dbr:Fiji_national_under-20_football_team , dbr:Fiji_national_under-23_football_team , <http://dbpedia.org/resource/ATK_(football_club)> , dbr:Mohun_Bagan_Super_Giant .
+
+ex:Ronald_Vargas  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Venezuela_national_football_team;
+        dbo:birthDate     "1986-12-02"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Guatire , dbr:Venezuela_national_football_team;
+        dbo:position      dbr:Midfielder , <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Newcastle_Jets_FC , <http://dbpedia.org/resource/Caracas_F.C.> , dbr:K.M.S.K._Deinze , <http://dbpedia.org/resource/AEK_Athens_F.C.> , dbr:Club_Brugge_KV , dbr:Venezuela_national_football_team , dbr:R.S.C._Anderlecht , dbr:Balıkesirspor , dbr:K.V._Oostende .
+
+ex:Roman_Týce  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:Czech_Republic_national_football_team;
+        dbo:birthDate     "1977-05-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Czechoslovakia , dbr:Roudnice_nad_Labem;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:FC_Slovan_Liberec , dbr:Czech_Republic_national_under-21_football_team , dbr:SpVgg_Unterhaching , dbr:TSV_1860_Munich , dbr:AC_Sparta_Prague , dbr:Czech_Republic_national_football_team .
+
+ex:Roman_Kosecki  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Poland_national_football_team;
+        dbo:birthDate     "1966-02-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Poland_national_football_team , dbr:Piaseczno;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:RKS_Ursus , dbr:CA_Osasuna , dbr:Poland_national_football_team , <http://dbpedia.org/resource/Galatasaray_S.K._(football)> , dbr:Chicago_Fire_FC , dbr:FC_Nantes , dbr:Legia_Warsaw , dbr:Atlético_Madrid , dbr:Poland_national_under-18_football_team , dbr:Gwardia_Warsaw , dbr:Montpellier_HSC , dbr:RKS_Mirków .
+
+ex:Mustafa_Denizli  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Turkey_national_football_team;
+        dbo:birthDate     "1949-11-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Turkey , dbr:Çeşme;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Turkey_national_football_team , <http://dbpedia.org/resource/Galatasaray_S.K._(football)> , <http://dbpedia.org/resource/Altay_S.K.> , dbr:Pakhtakor_FC .
+
+ex:Metin_Tekin  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Turkey_national_football_team;
+        dbo:birthDate     "1964-05-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Turkey_national_football_team , dbr:İzmit;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)> , <http://dbpedia.org/resource/Winger_(association_football)>;
+        dbo:team          dbr:Kocaelispor , <http://dbpedia.org/resource/Beşiktaş_J.K.> , dbr:Turkey_national_under-18_football_team , dbr:Vanspor , dbr:Beşiktaş_J.K._Football_Academy , dbr:Turkey_national_football_team , dbr:Turkey_national_under-21_football_team .
+
+ex:Masahiro_Fukuda  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Japan_national_football_team;
+        dbo:birthDate     "1966-12-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Yokohama , dbr:Japan , dbr:Kanagawa_Prefecture;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Shonan_Institute_of_Technology_High_School , dbr:Japan_national_football_team , dbr:Urawa_Red_Diamonds .
+
+ex:Luke_Dimech  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Malta_national_football_team;
+        dbo:birthDate     "1977-01-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Floriana , dbr:Malta_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:AEK_Larnaca_FC , dbr:Malta_national_under-21_football_team , <http://dbpedia.org/resource/Chester_City_F.C.> , <http://dbpedia.org/resource/Marsaxlokk_F.C.> , <http://dbpedia.org/resource/Mosta_F.C.> , <http://dbpedia.org/resource/Valletta_F.C.> , <http://dbpedia.org/resource/Sliema_Wanderers_F.C.> , <http://dbpedia.org/resource/Lincoln_City_F.C.> , <http://dbpedia.org/resource/Macclesfield_Town_F.C.> , <http://dbpedia.org/resource/Mansfield_Town_F.C.> , dbr:Malta_national_football_team , <http://dbpedia.org/resource/Shamrock_Rovers_F.C.> , <http://dbpedia.org/resource/Birkirkara_F.C.> .
+
+ex:Lorenzo_Staelens  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Belgium_national_football_team;
+        dbo:birthDate     "1964-04-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Menen , dbr:Belgium_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:Oita_Trinita , dbr:R.S.C._Anderlecht , dbr:K.V._Kortrijk , dbr:Club_Brugge_KV , dbr:Belgium_national_football_team .
+
+ex:John_van_den_Brom  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Netherlands_national_football_team;
+        dbo:birthDate     "1966-10-04"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Netherlands_national_football_team , dbr:Amersfoort;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:De_Graafschap , dbr:İstanbulspor , dbr:Netherlands_national_football_team , dbr:AFC_Ajax , dbr:SBV_Vitesse .
+
+ex:Jens_Jørn_Bertelsen
+        rdf:type          ex:Footballer;
+        dbo:NationalTeam  ex:Denmark_national_football_team;
+        dbo:birthDate     "1952-02-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Guldager , dbr:Denmark;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Aarau , dbr:Denmark_national_football_team , <http://dbpedia.org/resource/R.F.C._Seraing_(1904)> , dbr:Denmark_national_under-21_football_team , dbr:FC_Rouen , dbr:Esbjerg_fB .
+
+ex:Jean-Marc_Ferreri  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:France_national_football_team;
+        dbo:birthDate     "1962-12-26"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Charlieu , dbr:France_national_football_team;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Martigues , dbr:AJ_Auxerre , dbr:FC_Girondins_de_Bordeaux , dbr:FC_Zürich , dbr:Olympique_de_Marseille , dbr:Saint-Denis_Saint-Leu_FC , dbr:SC_Toulon , dbr:France_national_football_team .
+
+ex:Hiroshi_Kiyotake  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Japan_national_football_team;
+        dbo:birthDate     "1989-11-12"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Japan_national_football_team , <http://dbpedia.org/resource/Ōita_(city)>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Cerezo_Osaka , dbr:Oita_Trinita , dbr:Japan_national_under-23_football_team , dbr:Japan_national_football_team , dbr:Japan_national_under-20_football_team , dbr:1._FC_Nürnberg , dbr:Hannover_96 , dbr:Sevilla_FC , dbr:Sagan_Tosu .
+
+ex:Hassan_Shehata  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Egypt_national_football_team;
+        dbo:birthDate     "1947-06-19"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Kafr_El_Dawwar , dbr:Kingdom_of_Egypt , dbr:Beheira_Governorate;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:Zamalek_SC , dbr:Egypt_national_football_team , dbr:Kazma_SC .
+
+ex:Gustavo_Neffa  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Paraguay_national_football_team;
+        dbo:birthDate     "1971-11-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Paraguay , dbr:Asunción;
+        dbo:position      <http://dbpedia.org/resource/Winger_(association_football)> , <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Estudiantes_de_La_Plata , dbr:US_Cremonese , dbr:FC_Dallas , dbr:Juventus_FC , dbr:Unión_de_Santa_Fe , dbr:Club_Olimpia , dbr:Club_Sol_de_América , dbr:Boca_Juniors , dbr:Paraguay_national_football_team , dbr:Paraguay_national_under-23_football_team .
+
+ex:Gabriel_Cichero  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Venezuela_national_football_team;
+        dbo:birthDate     "1984-04-25"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Venezuela_national_football_team , dbr:Caracas;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Américas_Kings_League , dbr:A.C.C.D._Mineros_de_Guayana , <http://dbpedia.org/resource/Newell's_Old_Boys> , dbr:New_York_Red_Bulls , <http://dbpedia.org/resource/Caracas_F.C.> , dbr:Asociación_Civil_Deportivo_Lara , dbr:US_Lecce , dbr:FC_Sion , <http://dbpedia.org/resource/Montevideo_Wanderers_F.C.> , dbr:Odisha_FC , dbr:FC_Nantes , dbr:RC_Lens , dbr:Venezuela_national_football_team , dbr:OFC_Vihren_Sandanski , <http://dbpedia.org/resource/Deportivo_Miranda_F.C.> .
+
+ex:Eran_Zahavi  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Israel_national_football_team;
+        dbo:birthDate     "1987-07-25"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Rishon_LeZion , dbr:Israel_national_football_team;
+        dbo:position      dbr:Playmaker , <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Hapoel_Rishon_LeZion_F.C.> , <http://dbpedia.org/resource/Hapoel_Nir_Ramat_HaSharon_F.C.> , dbr:Palermo_FC , dbr:PSV_Eindhoven , dbr:Israel_national_under-21_football_team , dbr:Israel_national_football_team , <http://dbpedia.org/resource/Guangzhou_City_F.C.> , <http://dbpedia.org/resource/Hapoel_Tel_Aviv_F.C.> , <http://dbpedia.org/resource/Maccabi_Tel_Aviv_F.C.> .
+
+ex:Besnik_Hasi  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Albania_national_football_team;
+        dbo:birthDate     "1971-12-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Gjakova , dbr:Socialist_Federal_Republic_of_Yugoslavia;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:FC_Prishtina , dbr:NK_Samobor , dbr:NK_Zagreb , dbr:FK_Dinamo_Pančevo , dbr:Kosovo_national_football_team , dbr:K.R.C._Genk , <http://dbpedia.org/resource/Cercle_Brugge_K.S.V.> , dbr:TSV_1860_Munich , dbr:Albania_national_football_team , dbr:R.S.C._Anderlecht , dbr:KF_Liria_Prizren , dbr:K.S.C._Lokeren_Oost-Vlaanderen , dbr:KF_Vëllaznimi_Gjakovë .
+
+ex:Zhang_Linpeng  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:China_PR_national_football_team , ex:Syria_national_football_team;
+        dbo:birthDate     "1989-05-09"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Jinan , dbr:Shandong , dbr:China_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:China_national_under-20_football_team , <http://dbpedia.org/resource/Guangzhou_F.C.> , dbr:China_national_football_team , <http://dbpedia.org/resource/Shanghai_Port_F.C.> , <http://dbpedia.org/resource/Qingdao_Hainiu_F.C.> , dbr:China_national_under-23_football_team .
+
+ex:Yaw_Preko  rdf:type    ex:Footballer;
+        dbo:NationalTeam  ex:Ghana_national_football_team;
+        dbo:birthDate     "1974-09-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Ghana;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Ghana_national_under-20_football_team , dbr:Halmstads_BK , dbr:Gaziantepspor , <http://dbpedia.org/resource/Fenerbahçe_S.K._(football)> , dbr:Ghana_national_football_team , <http://dbpedia.org/resource/Accra_Hearts_of_Oak_S.C.> , dbr:R.S.C._Anderlecht , dbr:Hoang_Anh_Gia_Lai_FC , dbr:Yozgatspor , dbr:Al-Ettifaq_FC .
+
+ex:Yassine_Chikhaoui  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Tunisia_national_football_team;
+        dbo:birthDate     "1986-09-21"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Tunisia_national_football_team , dbr:Radès;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Étoile_Sportive_du_Sahel , dbr:Tunisia_national_football_team , <http://dbpedia.org/resource/AS_d'Ariana> , <http://dbpedia.org/resource/Al_Ahli_SC_(Doha)> , dbr:FC_Zürich , dbr:Al-Gharafa_SC .
+
+ex:Wolfgang_Dremmler  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Germany_national_football_team;
+        dbo:birthDate     "1954-07-12"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Germany_national_football_team , dbr:Salzgitter;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Eintracht_Braunschweig , dbr:Germany_national_football_team , dbr:FC_Bayern_Munich , dbr:Germany_national_football_B_team .
+
+ex:Wim_Rijsbergen  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Netherlands_national_football_team;
+        dbo:birthDate     "1952-01-18"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Netherlands_national_football_team , dbr:Leiden;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:FC_Utrecht , dbr:Feyenoord , dbr:Netherlands_national_football_team , dbr:SC_Bastia , dbr:PEC_Zwolle , <http://dbpedia.org/resource/New_York_Cosmos_(1970–1985)> , dbr:Helmond_Sport .
+
+ex:Wilson_Oruma  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Nigeria_national_football_team;
+        dbo:birthDate     "1976-12-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Nigeria_national_football_team , dbr:Warri;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:En_Avant_Guingamp , dbr:Servette_FC , dbr:Nîmes_Olympique , <http://dbpedia.org/resource/Kavala_F.C.> , dbr:Samsunspor , dbr:RC_Lens , <http://dbpedia.org/resource/Bendel_Insurance_F.C.> , dbr:Olympique_de_Marseille , dbr:Nigeria_national_football_team , dbr:AS_Nancy_Lorraine , dbr:FC_Sochaux-Montbéliard .
+
+ex:Tayfun_Korkut  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Turkey_national_football_team;
+        dbo:birthDate     "1974-04-02"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Stuttgart;
+        dbo:position      dbr:Midfielder;
+        dbo:team          <http://dbpedia.org/resource/Fenerbahçe_S.K._(football)> , dbr:Stuttgarter_Kickers , <http://dbpedia.org/resource/Beşiktaş_J.K.> , dbr:RCD_Espanyol , dbr:Turkey_national_football_team , dbr:Turkey_national_under-21_football_team , dbr:Real_Sociedad , <http://dbpedia.org/resource/Gençlerbirliği_S.K.> .
+
+ex:Tarik_Sektioui  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Morocco_national_football_team;
+        dbo:birthDate     "1977-05-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Fez,_Morocco>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Morocco_national_under-23_football_team , dbr:C.S._Marítimo , dbr:Maghreb_of_Fez , dbr:Ajman_Club , dbr:Willem_II_Tilburg , dbr:AZ_Alkmaar , dbr:FC_Porto , dbr:Morocco_national_football_team , dbr:Neuchâtel_Xamax_FCS , dbr:AJ_Auxerre , dbr:RKC_Waalwijk , dbr:Morocco_national_under-20_football_team .
+
+ex:Stuart_McCall  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Scotland_national_football_team;
+        dbo:birthDate     "1964-06-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:England_national_under-21_football_team , dbr:Leeds;
+        dbo:position      dbr:Midfielder;
+        dbo:team          <http://dbpedia.org/resource/Rangers_F.C.> , <http://dbpedia.org/resource/Preston_North_End_F.C.> , <http://dbpedia.org/resource/Sheffield_United_F.C.> , <http://dbpedia.org/resource/Farsley_Celtic_F.C.> , dbr:Scotland_national_football_team , <http://dbpedia.org/resource/Bradford_City_A.F.C.> , <http://dbpedia.org/resource/Everton_F.C.> , dbr:Scotland_national_under-21_football_team .
+
+ex:Souleymane_Youla  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Guinea_national_football_team;
+        dbo:birthDate     "1981-11-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Conakry , dbr:Guinea_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:R.F.C._Tournai , dbr:Lille_OSC , <http://dbpedia.org/resource/Beşiktaş_J.K.> , dbr:Eskişehirspor , <http://dbpedia.org/resource/Gençlerbirliği_S.K.> , dbr:Guinea_national_football_team , dbr:Budapest_Honvéd_FC , dbr:K.S.K._Ronse , dbr:Denizlispor , dbr:Sportkring_Sint-Niklaas , dbr:Amiens_SC , dbr:Indy_Eleven , dbr:R.S.C._Anderlecht , dbr:FC_Metz , dbr:K.S.C._Lokeren_Oost-Vlaanderen .
+
+ex:Serhiy_Konovalov  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Ukraine_national_football_team;
+        dbo:birthDate     "1972-03-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Poltava , dbr:Ukrainian_Soviet_Socialist_Republic;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Systema-Boreks_Borodianka , dbr:Ukraine_national_football_team , dbr:Pohang_Steelers , dbr:FC_Arsenal_Kyiv , dbr:FC_Arsenal-2_Kyiv , dbr:Shamakhi_FK , dbr:Dnipro , dbr:FC_Dynamo-3_Kyiv , dbr:FC_Borysfen_Boryspil , <http://dbpedia.org/resource/Beitar_Jerusalem_F.C.> , dbr:FC_Dnipro-3_Dnipropetrovsk , <http://dbpedia.org/resource/Qingdao_Hainiu_F.C.> , dbr:FC_Dnipro , dbr:FC_Dnipro-2_Dnipropetrovsk , dbr:FC_Dynamo-2_Kyiv , dbr:FC_Dynamo_Kyiv .
+
+ex:Sergei_Gurenko  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Belarus_national_football_team;
+        dbo:birthDate     "1972-09-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Soviet_Union , dbr:Grodno;
+        dbo:position      dbr:Midfielder , <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Piacenza_Calcio_1919 , dbr:AS_Roma , dbr:Parma_Calcio_1913 , dbr:Real_Zaragoza , dbr:FC_Dinamo_Minsk , dbr:Belarus_national_football_team , dbr:FC_Partizan_Minsk , dbr:FC_Lokomotiv_Moscow , dbr:FC_Neman_Grodno .
+
+ex:Rüdiger_Abramczik  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Germany_national_football_team;
+        dbo:birthDate     "1956-02-18"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:West_Germany , dbr:Gelsenkirchen;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Rot-Weiß_Oberhausen , dbr:Germany_national_football_team , dbr:Borussia_Dortmund , dbr:1._FC_Nürnberg , dbr:Wormatia_Worms , dbr:Germany_national_football_B_team , <http://dbpedia.org/resource/Galatasaray_S.K._(football)> , dbr:FC_Schalke_04 , dbr:FC_Gütersloh .
+
+ex:Rob_Witschge  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Netherlands_national_football_team;
+        dbo:birthDate     "1966-08-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Netherlands_national_football_team , dbr:Amsterdam;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Utrecht , dbr:AS_Saint-Étienne , dbr:Feyenoord , dbr:Netherlands_national_football_team , dbr:AFC_Ajax , dbr:Ittihad_Club .
+
+ex:Randall_Azofeifa  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Costa_Rica_national_football_team;
+        dbo:birthDate     "1984-12-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/San_José,_Costa_Rica>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Kayseri_Erciyesspor , <http://dbpedia.org/resource/Sporting_F.C.> , dbr:C.S._Herediano , dbr:K.A.A._Gent , dbr:Costa_Rica_national_football_team , dbr:Deportivo_Saprissa , dbr:C.S._Uruguay_de_Coronado , <http://dbpedia.org/resource/Gençlerbirliği_S.K.> .
+
+ex:Peter_van_Vossen  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Netherlands_national_football_team;
+        dbo:birthDate     "1968-04-21"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Netherlands_national_football_team , dbr:Zierikzee;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:VV_Bennekom , dbr:SBV_Vitesse , dbr:VC_Vlissingen , dbr:AFC_Ajax , dbr:R.S.C._Anderlecht , dbr:Netherlands_national_football_team , dbr:Feyenoord , dbr:İstanbulspor , dbr:De_Graafschap , dbr:K.S.K._Beveren , <http://dbpedia.org/resource/Rangers_F.C.> .
+
+ex:Patricio_Urrutia  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Ecuador_national_football_team;
+        dbo:birthDate     "1978-10-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Los_Ríos_Province , dbr:Ventanas , dbr:Ecuador_national_football_team;
+        dbo:position      dbr:Midfielder;
+        dbo:team          <http://dbpedia.org/resource/Delfín_S.C.> , dbr:Fluminense_FC , dbr:C.D._Técnico_Universitario , dbr:Ecuador_national_football_team , dbr:L.D.U._Quito , dbr:C.S.D._Macará , <http://dbpedia.org/resource/Barcelona_S.C.> .
+
+ex:Pak_Kwang-ryong  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:North_Korea_national_football_team;
+        dbo:birthDate     "1992-09-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Pyongyang , dbr:North_Korea;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Wolmido_Sports_Club , dbr:Kigwancha_Sports_Club , dbr:FC_Vaduz , dbr:FC_Biel-Bienne , dbr:Sierning , dbr:North_Korea_national_under-23_football_team , dbr:FC_Lausanne-Sport , dbr:North_Korea_national_football_team , dbr:SKN_St._Pölten , dbr:FC_Basel , dbr:FC_Wil , dbr:AC_Bellinzona .
+
+ex:Pablo_Thiam  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Guinea_national_football_team;
+        dbo:birthDate     "1974-01-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Conakry , dbr:Guinea_national_football_team;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Bayern_Munich , dbr:VfL_Wolfsburg , dbr:1._FC_Köln , dbr:VfB_Stuttgart , dbr:Guinea_national_football_team .
+
+ex:Njazi_Kuqi  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:Finland_national_football_team;
+        dbo:birthDate     "1983-03-25"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Vushtrri , dbr:Socialist_Federal_Republic_of_Yugoslavia;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Panionios_G.S.S.> , <http://dbpedia.org/resource/Peterborough_United_F.C.> , dbr:FC_Groningen , <http://dbpedia.org/resource/Blackpool_F.C.> , <http://dbpedia.org/resource/Birmingham_City_F.C.> , dbr:Turun_Palloseura , dbr:FC_Lahti , dbr:SG_Sonnenhof_Großaspach , <http://dbpedia.org/resource/Atromitos_F.C.> , dbr:Mikkelin_Palloilijat , dbr:FinnPa , <http://dbpedia.org/resource/Olympiacos_Volos_F.C.> , dbr:FC_Pro_Vercelli_1892 , <http://dbpedia.org/resource/Stevenage_F.C.> , dbr:Finland_national_football_team , <http://dbpedia.org/resource/Dundee_F.C.> , dbr:FC_Carl_Zeiss_Jena , dbr:TuS_Koblenz .
+
+ex:Miroslav_Baranek  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Czech_Republic_national_football_team;
+        dbo:birthDate     "1973-11-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Havířov , dbr:Czechoslovakia;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:SK_Sigma_Olomouc , dbr:1._SK_Prostějov , dbr:Admira_Wacker , dbr:MFK_Vítkovice , dbr:FC_LeRK_Brno , dbr:FK_Mladá_Boleslav , dbr:1._FC_Köln , dbr:Czech_Republic_national_football_team , dbr:AC_Sparta_Prague , dbr:FK_Jablonec , dbr:Czech_Republic_national_under-21_football_team , dbr:MFK_Havířov .
+
+ex:Mauricio_Wright  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Costa_Rica_national_football_team;
+        dbo:birthDate     "1970-12-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/San_José,_Costa_Rica>;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:C.S._Herediano , dbr:San_Jose_Earthquakes , <http://dbpedia.org/resource/Guangzhou_City_F.C.> , dbr:Costa_Rica_national_football_team , dbr:New_England_Revolution , dbr:Deportivo_Saprissa , <http://dbpedia.org/resource/AEK_Athens_F.C.> , <http://dbpedia.org/resource/Comunicaciones_F.C.> , dbr:C.S._Cartaginés .
+
+ex:Martin_Reim  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Estonia_national_football_team;
+        dbo:birthDate     "1971-05-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Estonia_national_football_team , dbr:Tartu;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:FC_Lelle , dbr:Kotkan_Työväen_Palloilijat , dbr:Pärnu_JK_Tervis , dbr:FC_Flora , dbr:Estonia_national_football_team , dbr:SK_Tallinna_Sport , dbr:FC_Norma_Tallinn .
+
+ex:Marek_Leśniak  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Poland_national_football_team;
+        dbo:birthDate     "1964-02-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Goleniów , dbr:Poland_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:SV_Hilden-Nord , dbr:Pomorzanin_Nowogard , dbr:FV_Wiehl , dbr:Poland_national_football_team , dbr:SC_Preußen_Münster , dbr:Bayer_04_Leverkusen , dbr:SSVg_Velbert , dbr:Pogoń_Szczecin , dbr:SG_Wattenscheid_09 , dbr:TSV_1860_Munich , dbr:Neuchâtel_Xamax_FCS , dbr:Fortuna_Düsseldorf , dbr:KFC_Uerdingen_05 , dbr:Poland_national_under-20_football_team .
+
+ex:Kennedy_Mweene  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Zambia_national_football_team;
+        dbo:birthDate     "1984-12-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Zambia_national_football_team , dbr:Lusaka;
+        dbo:position      <http://dbpedia.org/resource/Goalkeeper_(association_football)>;
+        dbo:team          dbr:Lusaka_Celtic , <http://dbpedia.org/resource/Kitwe_United_F.C.> , <http://dbpedia.org/resource/Mamelodi_Sundowns_F.C.> , <http://dbpedia.org/resource/Free_State_Stars_F.C.> , dbr:Zambia_national_football_team , <http://dbpedia.org/resource/Lusaka_Dynamos_F.C.> .
+
+ex:Kaies_Ghodhbane  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Tunisia_national_football_team;
+        dbo:birthDate     "1976-01-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Tunisia_national_football_team , dbr:Moknine;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Étoile_Sportive_du_Sahel , dbr:Tunisia_national_football_team , dbr:Konyaspor , dbr:Diyarbakırspor , dbr:Samsunspor , dbr:Baniyas_Club .
+
+ex:Jesús_Arellano  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Mexico_national_football_team;
+        dbo:birthDate     "1973-05-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Monterrey , dbr:Nuevo_León , dbr:Mexico_national_football_team;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:C.F._Monterrey , dbr:C.D._Guadalajara , dbr:Mexico_national_football_team .
+
+ex:Jan_Åge_Fjørtoft  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Norway_national_football_team;
+        dbo:birthDate     "1967-01-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Norway_national_football_team , dbr:Gursken , dbr:Møre_og_Romsdal;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Swindon_Town_F.C.> , <http://dbpedia.org/resource/Barnsley_F.C.> , dbr:Hamarkameratene , dbr:Lillestrøm_SK , dbr:Stabæk_Fotball , dbr:Norway_national_under-21_football_team , <http://dbpedia.org/resource/Middlesbrough_F.C.> , <http://dbpedia.org/resource/Sheffield_United_F.C.> , dbr:Eintracht_Frankfurt , dbr:IL_Hødd , dbr:SK_Rapid_Wien , dbr:Gursken , dbr:Norway_national_under-19_football_team , dbr:Norway_national_football_team .
+
+ex:Hristo_Bonev  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Bulgaria_national_football_team;
+        dbo:birthDate     "1947-02-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Bulgaria_national_football_team , dbr:Plovdiv;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Bulgaria_national_football_team , dbr:PFC_CSKA_Sofia , <http://dbpedia.org/resource/AEK_Athens_F.C.> , dbr:PFC_Lokomotiv_Plovdiv .
+
+ex:Gu_Guangming  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:China_PR_national_football_team;
+        dbo:birthDate     "1959-01-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:China_national_football_team , dbr:Guangdong , dbr:Shaoguan;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Guangdong_Junior_Team , dbr:China_national_under-20_football_team , dbr:TuS_Koblenz , dbr:China_national_football_team , dbr:SV_Darmstadt_98 , <http://dbpedia.org/resource/Guangdong_Winnerway_F.C.> .
+
+ex:Gordon_Durie  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Scotland_national_football_team;
+        dbo:birthDate     "1965-12-06"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Paisley,_Renfrewshire> , dbr:Scotland_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Rangers_F.C.> , <http://dbpedia.org/resource/Tottenham_Hotspur_F.C.> , <http://dbpedia.org/resource/Chelsea_F.C.> , <http://dbpedia.org/resource/Hibernian_F.C.> , <http://dbpedia.org/resource/East_Fife_F.C.> , <http://dbpedia.org/resource/Heart_of_Midlothian_F.C.> , dbr:Scotland_national_football_team .
+
+ex:Davit_Mujiri  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Georgia_national_football_team;
+        dbo:birthDate     "1978-01-02"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Soviet_Union , dbr:Tbilisi;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:PFC_Krylia_Sovetov_Samara , dbr:Sanfrecce_Hiroshima , dbr:FC_Dinamo_Tbilisi , dbr:FC_Sheriff_Tiraspol , dbr:FC_Zestaponi , dbr:Georgia_national_under-17_football_team , dbr:Georgia_national_under-19_football_team , dbr:FC_Lokomotiv_Moscow , dbr:SK_Sturm_Graz , dbr:Georgia_national_under-21_football_team .
+
+ex:Daniel_Pancu  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Romania_national_football_team;
+        dbo:birthDate     "1977-08-17"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Romania_national_football_team , dbr:Iași;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:FC_Voluntari , dbr:Romania_national_under-16_football_team , dbr:FC_Akhmat_Grozny , dbr:FC_Rapid_București , dbr:Romania_national_under-19_football_team , dbr:CS_Sporting_Vaslui , dbr:Bursaspor , <http://dbpedia.org/resource/FC_Politehnica_Iași_(1945)> , dbr:AC_Cesena , dbr:PFC_CSKA_Sofia , <http://dbpedia.org/resource/Beşiktaş_J.K.> , dbr:Romania_national_under-21_football_team .
+
+ex:Chavdar_Yankov  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Bulgaria_national_football_team;
+        dbo:birthDate     "1984-03-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Bulgaria_national_football_team , dbr:Sofia;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Bulgaria_national_football_team , dbr:MSV_Duisburg , dbr:FC_Rostov , dbr:FC_Metalurh_Donetsk , dbr:Hannover_96 , dbr:PFC_Slavia_Sofia .
+
+ex:Celso_Ayala  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Paraguay_national_football_team;
+        dbo:birthDate     "1970-08-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Paraguay_national_football_team , dbr:Asunción;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Paraguay_national_under-23_football_team , dbr:Paraguay_national_football_team , dbr:Club_Olimpia , dbr:Colo-Colo , dbr:São_Paulo_FC , dbr:Club_Atlético_River_Plate , dbr:Real_Betis , dbr:Atlético_Madrid , dbr:Rosario_Central .
+
+ex:Carlos_Edwards  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Trinidad_and_Tobago_national_football_team;
+        dbo:birthDate     "1978-10-24"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Diego_Martin;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)> , <http://dbpedia.org/resource/Winger_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Queen's_Park_Cricket_Club> , <http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.> , <http://dbpedia.org/resource/Millwall_F.C.> , <http://dbpedia.org/resource/Ma_Pau_Stars_S.C.> , <http://dbpedia.org/resource/Central_F.C.> , <http://dbpedia.org/resource/Defence_Force_F.C.> , dbr:Trinidad_and_Tobago_national_football_team , <http://dbpedia.org/resource/Bury_Town_F.C.> , <http://dbpedia.org/resource/Ipswich_Town_F.C.> , <http://dbpedia.org/resource/Luton_Town_F.C.> , <http://dbpedia.org/resource/Sunderland_A.F.C.> , <http://dbpedia.org/resource/Wrexham_A.F.C.> , <http://dbpedia.org/resource/Hadleigh_United_F.C.> , <http://dbpedia.org/resource/Woodbridge_Town_F.C.> .
+
+ex:Bobby_Convey  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:United_States_national_football_team;
+        dbo:birthDate     "1983-05-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Philadelphia , dbr:Pennsylvania , <http://dbpedia.org/resource/United_States_men's_national_soccer_team>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:D.C._United , dbr:Generation_Adidas , <http://dbpedia.org/resource/United_States_men's_national_soccer_team> , dbr:Sporting_Kansas_City , dbr:San_Jose_Earthquakes , <http://dbpedia.org/resource/Reading_F.C.> , dbr:New_York_Red_Bulls , <http://dbpedia.org/resource/United_States_men's_national_under-20_soccer_team> , dbr:Toronto_FC , <http://dbpedia.org/resource/United_States_men's_national_under-17_soccer_team> , dbr:IMG_Academy .
+
+ex:Ulugbek_Bakayev  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Uzbekistan_national_football_team;
+        dbo:birthDate     "1978-11-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Soviet_Union , dbr:Uzbek_Soviet_Socialist_Republic , dbr:Bukhara;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:FC_Navbahor , dbr:FC_Zhetysu , dbr:FC_Irtysh_Pavlodar , dbr:Dubai_CSC , dbr:FC_Bukhara , dbr:FC_Bunyodkor , dbr:Uzbekistan_national_football_team , dbr:FK_Andijon , dbr:FC_Tobol , dbr:PFC_CSKA_Moscow , dbr:FC_Neftekhimik_Nizhnekamsk , dbr:FC_Dinamo_Samarqand , dbr:FC_Torpedo-ZIL_Moscow .
+
+ex:Ubaldo_Cruche  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Uruguay_national_football_team;
+        dbo:birthDate     "1920-05-25"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Uruguay_national_football_team , dbr:Montevideo;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Uruguay_national_football_team , dbr:Peñarol , dbr:Club_Universidad_de_Chile .
+
+ex:Paul_Vandenberg  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Belgium_national_football_team;
+        dbo:birthDate     "1936-10-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Belgium , <http://dbpedia.org/resource/Saint-Gilles,_Belgium>;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:K.V.V._Crossing_Elewijt , dbr:Standard_Liège , dbr:R.S.C._Anderlecht , dbr:Royale_Union_Saint-Gilloise , dbr:Belgium_national_football_team .
+
+ex:Levon_Hayrapetyan  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Serbia_national_football_team;
+        dbo:birthDate     "1989-04-17"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Soviet_Union , dbr:Yerevan , dbr:Armenian_Soviet_Socialist_Republic;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Lechia_Gdańsk , dbr:FC_Pyunik , dbr:Widzew_Łódź , dbr:Hamburger_SV , dbr:FK_Příbram , dbr:Hamburger_SV_II , dbr:Armenia_national_under-19_football_team , <http://dbpedia.org/resource/Paykan_F.C.> , dbr:Armenia_national_football_team , dbr:Armenia_national_under-21_football_team , dbr:FC_Alashkert .
+
+ex:Kevin_Vandenbergh  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Belgium_national_football_team;
+        dbo:birthDate     "1983-05-16"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Bonheiden , dbr:Belgium_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Beerschot_A.C.> , dbr:Belgium_national_football_team , dbr:K.V._Mechelen , dbr:K.A.S._Eupen , dbr:Belgium_national_under-21_football_team , dbr:K_Ramsel_FC , dbr:SC_Aarschot , dbr:K.R.C._Genk , dbr:K.F.C._Dessel_Sport , dbr:K.V.C._Westerlo , dbr:FC_Utrecht .
+
+ex:Ismed_Sofyan  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Indonesia_national_football_team;
+        dbo:birthDate     "1979-08-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Indonesia_national_football_team , dbr:Aceh_Tamiang_Regency;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:F.C._Bekasi_City , dbr:PSBL_Langsa , dbr:Persiraja_Banda_Aceh , dbr:Indonesia_national_under-20_football_team , <http://dbpedia.org/resource/Sriwijaya_F.C.> , dbr:Indonesia_national_under-23_football_team , dbr:Persija_Jakarta .
+
+ex:Gunnar_Halle  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Norway_national_football_team;
+        dbo:birthDate     "1965-08-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Norway_national_football_team , dbr:Larvik;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)> , dbr:Midfielder;
+        dbo:team          <http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.> , <http://dbpedia.org/resource/Oldham_Athletic_A.F.C.> , dbr:Norway_national_football_team , dbr:Hønefoss_BK , <http://dbpedia.org/resource/Bradford_City_A.F.C.> , dbr:Larvik_Turn , <http://dbpedia.org/resource/Leeds_United_F.C.> , dbr:Lillestrøm_SK .
+
+ex:Giancarlo_De_Sisti
+        rdf:type          ex:Footballer;
+        dbo:NationalTeam  ex:Italy_national_football_team;
+        dbo:birthDate     "1943-03-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Kingdom_of_Italy , dbr:Rome;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:AS_Roma , dbr:ACF_Fiorentina , dbr:Italy_national_football_team .
+
+ex:Filip_Mladenović  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Serbia_national_football_team;
+        dbo:birthDate     "1991-08-15"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Čačak , dbr:Socialist_Republic_of_Serbia , dbr:Socialist_Federal_Republic_of_Yugoslavia;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Lechia_Gdańsk , <http://dbpedia.org/resource/Panathinaikos_F.C.> , dbr:Serbia_national_under-21_football_team , dbr:1._FC_Köln , dbr:FC_BATE_Borisov , dbr:Legia_Warsaw , dbr:Standard_Liège , dbr:FK_Borac_Čačak , dbr:Red_Star_Belgrade , dbr:Serbia_national_football_team .
+
+ex:Conny_Torstensson  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Sweden_national_football_team;
+        dbo:birthDate     "1949-08-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Sweden_men's_national_football_team> , dbr:Lofta;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:Sweden_national_under-21_football_team , <http://dbpedia.org/resource/Sweden_men's_national_football_team> , dbr:FC_Zürich , dbr:FC_Bayern_Munich , dbr:Åtvidabergs_FF .
+
+ex:Bernt_Haas  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:Switzerland_national_football_team;
+        dbo:birthDate     "1978-04-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Vienna;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:FC_St._Gallen , dbr:SC_Bastia , dbr:FC_Basel , <http://dbpedia.org/resource/West_Bromwich_Albion_F.C.> , <http://dbpedia.org/resource/Sunderland_A.F.C.> , dbr:FC_Freienbach , dbr:1._FC_Köln , dbr:Grasshopper_Club_Zurich , dbr:Switzerland_national_football_team .
+
+ex:Aleksei_Mamykin  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Russia_national_football_team;
+        dbo:birthDate     "1936-02-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Pitelinsky_District , dbr:Soviet_Union , dbr:Ryazan_Oblast;
+        dbo:deathDate     "2011-09-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Soviet_Union_national_football_team , dbr:FC_Dynamo_Moscow , dbr:SC_Odesa , dbr:PFC_CSKA_Moscow , dbr:FC_SKA_Rostov-on-Don .
+
+ex:Rudolf_Pichler  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Austria_national_football_team;
+        dbo:birthDate     "1930-09-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Austria;
+        dbo:deathDate     "2011-07-25"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/1._Wiener_Neustädter_SC_(2008)> , dbr:FK_Austria_Wien , dbr:FC_Red_Bull_Salzburg , dbr:Austria_national_football_team .
+
+ex:Bill_Looby  rdf:type   ex:Footballer;
+        dbo:NationalTeam  ex:United_States_national_football_team;
+        dbo:birthDate     "1931-11-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:St._Louis;
+        dbo:deathDate     "1998-12-09"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/St._Louis_Kutis_S.C.> , dbr:Zenthoefer_Furs , <http://dbpedia.org/resource/United_States_men's_national_soccer_team> .
+
+ex:Zhang_Enhua  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:China_PR_national_football_team;
+        dbo:birthDate     "1973-04-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:China_national_football_team , dbr:Dalian;
+        dbo:deathDate     "2021-04-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:China_national_football_team , <http://dbpedia.org/resource/Grimsby_Town_F.C.> , <http://dbpedia.org/resource/Dalian_Shide_F.C.> , <http://dbpedia.org/resource/Tianjin_Jinmen_Tiger_F.C.> , dbr:South_China_AA .
+
+ex:Richard_Herrmann  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Germany_national_football_team;
+        dbo:birthDate     "1923-01-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Poland , dbr:Katowice;
+        dbo:deathDate     "1962-07-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:FSV_Frankfurt , dbr:Germany_national_football_team , dbr:1._FC_Kattowitz .
+
+ex:Vladislao_Cap  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Argentina_national_football_team;
+        dbo:birthDate     "1934-07-05"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Avellaneda , dbr:Argentina_national_football_team;
+        dbo:deathDate     "1982-09-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Arsenal_de_Llavallol , dbr:Porvenir_Miraflores , dbr:Club_Atlético_Huracán , dbr:Quilmes_Atlético_Club , dbr:Argentina_national_football_team , dbr:Club_Atlético_River_Plate , dbr:Club_Atlético_Vélez_Sarsfield , dbr:Racing_Club_de_Avellaneda .
+
+ex:Bernd_Bransch  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:German_DR_national_football_team;
+        dbo:birthDate     "1944-09-24"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Free_State_of_Prussia , dbr:Nazi_Germany , dbr:Province_of_Halle-Merseburg , <http://dbpedia.org/resource/Halle_(Saale)>;
+        dbo:deathDate     "2022-06-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:position      <http://dbpedia.org/resource/Sweeper_(association_football)>;
+        dbo:team          dbr:FC_Carl_Zeiss_Jena , dbr:East_Germany_national_football_team , dbr:Hallescher_FC .
+
+ex:Jackie_Henderson  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Scotland_national_football_team;
+        dbo:birthDate     "1932-01-17"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Scotland_national_football_team , dbr:Glasgow;
+        dbo:deathDate     "2005-01-26"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Poole , dbr:Dorset;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Scotland_national_football_team , <http://dbpedia.org/resource/Dorchester_Town_F.C.> , dbr:Scotland_national_football_B_team , <http://dbpedia.org/resource/Arsenal_F.C.> , <http://dbpedia.org/resource/Fulham_F.C.> , <http://dbpedia.org/resource/Poole_Town_F.C.> , <http://dbpedia.org/resource/Portsmouth_F.C.> , <http://dbpedia.org/resource/Wolverhampton_Wanderers_F.C.> .
+
+ex:Billy_Bingham  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Northern_Ireland_national_football_team;
+        dbo:birthDate     "1931-08-05"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Belfast , dbr:Northern_Ireland_national_football_team;
+        dbo:deathDate     "2022-06-09"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:England_national_football_team , dbr:Southport;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Everton_F.C.> , <http://dbpedia.org/resource/Glentoran_F.C.> , <http://dbpedia.org/resource/Port_Vale_F.C.> , dbr:Northern_Ireland_national_football_team , <http://dbpedia.org/resource/Luton_Town_F.C.> , <http://dbpedia.org/resource/Sunderland_A.F.C.> , dbr:Irish_League_representative_team .
+
+ex:Josef_Šural  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Czech_Republic_national_football_team;
+        dbo:birthDate     "1990-05-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Czechoslovakia , dbr:Hustopeče;
+        dbo:deathDate     "2019-04-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Alanya;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Czech_Republic_national_under-18_football_team , dbr:Czech_Republic_national_under-17_football_team , dbr:Alanyaspor , dbr:FC_Slovan_Liberec , dbr:AC_Sparta_Prague , dbr:Šakvice , dbr:FC_Zbrojovka_Brno .
+
+ex:Iuliu_Baratky  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Romania_national_football_team;
+        dbo:birthDate     "1910-05-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Austria-Hungary , dbr:Oradea , dbr:Romania;
+        dbo:deathDate     "1962-04-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Bucharest , dbr:Romania;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Romania_national_football_team , dbr:Club_Atletic_Oradea , dbr:Crișana_Oradea , dbr:FC_Rapid_București , dbr:Stăruința_Oradea , dbr:FC_Carmen_București , dbr:MTK_Budapest_FC , dbr:CS_Târgu_Mureș , dbr:Hungary_national_football_team .
+
+ex:Godfrey_Chitalu  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Zambia_national_football_team;
+        dbo:birthDate     "1947-10-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Luanshya , dbr:Northern_Rhodesia;
+        dbo:deathDate     "1993-04-27"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Gabon , dbr:Atlantic_Ocean;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/Kitwe_United_F.C.> , <http://dbpedia.org/resource/Kabwe_Warriors_F.C.> , dbr:Zambia_national_football_team .
+
+ex:Wilfried_Puis  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Belgium_national_football_team;
+        dbo:birthDate     "1943-02-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Belgium_national_football_team , dbr:Ostend;
+        dbo:deathDate     "1981-10-21"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Belgium_national_football_team , dbr:Ostend;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:V.V._Koksijde , dbr:K.S.C._Lokeren_Oost-Vlaanderen , dbr:R.S.C._Anderlecht , dbr:Club_Brugge_KV , dbr:Belgium_national_football_team , <http://dbpedia.org/resource/A.S.V._Oostende_K.M.> .
+
+ex:Roberto_Perfumo  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Italy_national_football_team;
+        dbo:birthDate     "1942-10-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Sarandí,_Buenos_Aires> , dbr:Argentina_national_football_team;
+        dbo:deathDate     "2016-03-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Argentina_national_football_team , dbr:Buenos_Aires;
+        dbo:position      <http://dbpedia.org/resource/Defender_(association_football)>;
+        dbo:team          dbr:Cruzeiro_Esporte_Clube , dbr:Argentina_national_football_team , dbr:Club_Atlético_River_Plate , dbr:Racing_Club_de_Avellaneda .
+
+ex:Ladislav_Kuna  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Czechoslovakia_national_football_team;
+        dbo:birthDate     "1947-04-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Hlohovec , dbr:Czechoslovakia;
+        dbo:deathDate     "2012-02-01"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Bratislava;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Czechoslovakia_national_football_team , dbr:Admira_Wacker , dbr:FC_Spartak_Trnava .
+
+ex:Josef_Hornauer  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Germany_national_football_team;
+        dbo:birthDate     "1908-01-14"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Munich , dbr:Germany;
+        dbo:deathDate     "1985-12-12"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Munich , dbr:Germany;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Germany_national_football_team , dbr:TSV_1860_Munich , dbr:1._FC_Nürnberg .
+
+ex:Heleno_de_Freitas  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Brazil_national_football_team;
+        dbo:birthDate     "1920-02-12"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:São_João_Nepomuceno , dbr:Brazil_national_football_team;
+        dbo:deathDate     "1959-11-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Brazil_national_football_team , dbr:Barbacena;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          <http://dbpedia.org/resource/America_Football_Club_(Rio_de_Janeiro)> , dbr:Madureira_Esporte_Clube , dbr:Brazil_national_football_team , dbr:Atlético_Junior , dbr:Botafogo_de_Futebol_e_Regatas , dbr:Santos_FC , dbr:Boca_Juniors , dbr:CR_Vasco_da_Gama .
+
+ex:Roger_Piantoni  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:France_national_football_team;
+        dbo:birthDate     "1931-12-26"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:France_national_football_team , <http://dbpedia.org/resource/Étain,_Meuse>;
+        dbo:deathDate     "2018-05-26"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Ludres , dbr:France_national_football_team;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:FC_Nancy , dbr:OGC_Nice , dbr:Stade_de_Reims , dbr:France_national_football_team .
+
+ex:Ole_Bjørnmose  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Denmark_national_football_team;
+        dbo:birthDate     "1944-05-07"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Odense , dbr:Denmark_national_football_team;
+        dbo:deathDate     "2006-09-05"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Denmark_national_football_team , dbr:Strib;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)> , dbr:Midfielder;
+        dbo:team          dbr:Denmark_national_football_team , dbr:Boldklubben_1909 , dbr:Denmark_national_under-21_football_team , dbr:SV_Werder_Bremen , dbr:Hamburger_SV .
+
+ex:Louis_Pilot  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Luxembourg_national_football_team;
+        dbo:birthDate     "1940-11-11"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Luxembourg_national_football_team , dbr:Esch-sur-Alzette;
+        dbo:deathDate     "2016-04-16"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Luxembourg_national_football_team , dbr:Senningen;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Wavre_Sports_FC , dbr:Luxembourg_national_football_team , dbr:Standard_Liège , dbr:CS_Fola_Esch , <http://dbpedia.org/resource/Royal_Antwerp_F.C.> .
+
+ex:Kees_Pijl  rdf:type    ex:Footballer;
+        dbo:NationalTeam  ex:Netherlands_national_football_team;
+        dbo:birthDate     "1897-06-09"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Netherlands , dbr:Oosterhout;
+        dbo:deathDate     "1976-09-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Netherlands , dbr:Rotterdam;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Feyenoord , dbr:Netherlands_national_football_team .
+
+ex:Joe_Gaetjens  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:United_States_national_football_team;
+        dbo:birthDate     "1924-03-19"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    <http://dbpedia.org/resource/Republic_of_Haiti_(1859–1957)> , dbr:Port-au-Prince;
+        dbo:deathDate     "1964-07-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Port-au-Prince , dbr:Duvalier_dynasty;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Brookhattan , dbr:Olympique_Alès , <http://dbpedia.org/resource/United_States_men's_national_soccer_team> , dbr:Racing_Club_de_France_Football , dbr:Haiti_national_football_team , dbr:Etoile_Haïtienne .
+
+ex:Jean_Vincent  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:France_national_football_team;
+        dbo:birthDate     "1930-11-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Labeuvrière;
+        dbo:deathDate     "2013-08-13"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Saint-Nazaire , dbr:France_national_football_team;
+        dbo:position      dbr:Midfielder;
+        dbo:team          dbr:Lille_OSC , dbr:Stade_de_Reims , dbr:France_national_football_team .
+
+ex:Benito_Lorenzi  rdf:type  ex:Footballer;
+        dbo:NationalTeam  ex:Italy_national_football_team;
+        dbo:birthDate     "1925-12-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:birthPlace    dbr:Kingdom_of_Italy , dbr:Buggiano;
+        dbo:deathDate     "2007-03-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+        dbo:deathPlace    dbr:Italy , dbr:Milan;
+        dbo:position      <http://dbpedia.org/resource/Forward_(association_football)>;
+        dbo:team          dbr:Italy_national_football_team , dbr:Buggiano , dbr:Inter_Milan , dbr:Brescia_Calcio , dbr:Empoli_FC , dbr:SSD_Varese_Calcio , dbr:US_Alessandria_Calcio_1912 , dbr:Italy_national_football_B_team .

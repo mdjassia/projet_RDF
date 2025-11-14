@@ -1,0 +1,37 @@
+BASE <http://example.org/football/>
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?player rdf:type ex:Footballer ;
+          dbo:NationalTeam ?teamIRI .
+
+}
+WHERE {
+  # Colonnes CSV
+  BIND(?scorer AS ?scorer)
+  BIND(?team AS ?team)
+  BIND(?date AS ?date)
+  BIND(?home_team AS ?home_team)
+  BIND(?away_team AS ?away_team)
+
+  # Nettoyer le nom du joueur
+  BIND(REPLACE(?scorer, " ", "_") AS ?p1)
+  BIND(REPLACE(?p1, "\"", "") AS ?p2)
+  BIND(REPLACE(?p2, "í", "i") AS ?p3)
+  BIND(REPLACE(?p3, "é", "e") AS ?p4)
+  BIND(REPLACE(?p4, "á", "a") AS ?p5)
+  BIND(REPLACE(?p5, "ó", "o") AS ?p6)
+  BIND(REPLACE(?p6, "ñ", "n") AS ?p7)
+  BIND(IRI(CONCAT("http://example.org/football/", ?p7)) AS ?player)
+
+
+  # Nettoyer le nom de l'équipe et ajouter "NationalFootballTeam" à la fin
+  BIND(REPLACE(?team, " ", "_") AS ?t1)
+  BIND(REPLACE(?t1, "\"", "") AS ?t2)
+  BIND(IRI(CONCAT("http://example.org/football/", ?t2, "_national_football_team")) AS ?teamIRI)
+
+ 
+}
