@@ -1,0 +1,18 @@
+BASE <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX ex:  <http://example.org/football/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?player rdf:type ex:Footballer ;
+          dbo:NationalTeam ?teamURI .
+}
+WHERE {
+  # Remplacer uniquement les espaces par "_" pour créer un IRI local
+  BIND(REPLACE(?scorer, " ", "_") AS ?cleanName)
+  BIND(IRI(CONCAT("http://example.org/football/", ?cleanName)) AS ?player)
+
+  # Créer l'IRI DBpedia de l'équipe en ne touchant que les espaces
+  BIND(IRI(CONCAT("http://dbpedia.org/resource/", REPLACE(?team, " ", "_"))) AS ?teamURI)
+}

@@ -1,0 +1,43 @@
+BASE <http://example.org/football/>
+PREFIX ex:  <http://example.org/football/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+
+  # Chaque goal a son IRI unique
+  ?goal rdf:type ex:Goal ;
+        ex:scoredBy ?player ;
+        ex:scoredIn ?match ;
+        ex:goalMinute ?minuteVal ;
+        ex:penalty ?penaltyVal ;
+        ex:ownGoal ?ownGoalVal .
+}
+WHERE {
+  # Nettoyage du nom du joueur pour créer un IRI valide
+  BIND(REPLACE(?scorer, "[^\\w]", "_") AS ?cleanName)
+  BIND(IRI(CONCAT("http://example.org/football/Player_", ?cleanName)) AS ?player)
+
+  # URI de l'équipe
+  BIND(IRI(CONCAT("http://dbpedia.org/resource/", REPLACE(?team, " ", "_"))) AS ?teamURI)
+
+  # URI du match
+  BIND(IRI(CONCAT(
+      "http://example.org/football/Match_",
+      STR(?date), "_",
+      REPLACE(?home_team, " ", "_"), "_",
+      REPLACE(?away_team, " ", "_")
+  )) AS ?match)
+
+  # Création de l'IRI unique pour le goal
+  BIND(IRI(CONCAT(
+      "http://example.org/football/Goal_",
+      ?cleanName, "_", STR(?minute)
+  )) AS ?goal)
+
+  # Typage des valeurs
+  BIND(xsd:integer(?minute) AS ?minuteVal)
+  BIND(xsd:boolean(?penalty) AS ?penaltyVal)
+  BIND(xsd:boolean(?own_goal) AS ?ownGoalVal)
+}

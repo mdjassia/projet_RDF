@@ -11,7 +11,6 @@ CONSTRUCT {
           dbo:NationalTeam ?team ;
           dbo:birthDate ?birthDate ;
           dbo:birthPlace ?birthPlace ;
-          
           dbo:position ?position ;
           dbo:deathDate ?deathDate ;
           dbo:team ?clubs ;
@@ -19,7 +18,11 @@ CONSTRUCT {
 }
 WHERE {
   ?player rdf:type ex:Footballer .
-  ?player dbo:NationalTeam ?team .
+
+  # Filtre pour noms commençant par "Z"
+  FILTER(STRSTARTS(STRAFTER(STR(?player), "football/"), "M"))
+
+  OPTIONAL { ?player dbo:NationalTeam ?team . }
 
   BIND(IRI(CONCAT("http://dbpedia.org/resource/", STRAFTER(STR(?player), "football/"))) AS ?dbpPlayer)
 
@@ -31,5 +34,4 @@ WHERE {
     OPTIONAL { ?dbpPlayer dbo:deathPlace ?deathPlace . }
     OPTIONAL { ?dbpPlayer dbo:team ?clubs . }
   }
-} 
-
+}
