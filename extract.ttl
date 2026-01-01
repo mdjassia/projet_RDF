@@ -1,0 +1,33 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX ex:  <http://example.org/football/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:Goal_Adam_Ounas_39
+        rdf:type       ex:Goal;
+        ex:goalMinute  39;
+        ex:scoredBy    ex:Adam_Ounas;
+        ex:scoredIn    ex:Match_2019-07-01_Tanzania_Algeria .
+
+ex:Islam_Slimani  rdf:type  ex:Footballer .
+
+ex:Goal_Islam_Slimani_35
+        rdf:type       ex:Goal;
+        ex:goalMinute  35;
+        ex:scoredBy    ex:Islam_Slimani;
+        ex:scoredIn    ex:Match_2019-07-01_Tanzania_Algeria .
+
+ex:Adam_Ounas  rdf:type  ex:Footballer .
+
+ex:Goal_Adam_Ounas_45
+        rdf:type       ex:Goal;
+        ex:goalMinute  45;
+        ex:scoredBy    ex:Adam_Ounas;
+        ex:scoredIn    ex:Match_2019-07-01_Tanzania_Algeria .
+
+ex:Match_2019-07-01_Tanzania_Algeria
+        rdf:type      ex:Match;
+        dbo:awayTeam  dbr:Algeria;
+        dbo:date      "2019-07-01"^^xsd:date;
+        dbo:homeTeam  dbr:Tanzania .
