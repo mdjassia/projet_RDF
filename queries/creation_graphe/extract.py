@@ -9,7 +9,7 @@ import time
 # -----------------------------
 INPUT_RDF = "schema/data/player.ttl"
 OUTPUT_RDF = "schema/data/players_enriched.ttl"
-BATCH_SIZE = 10
+BATCH_SIZE = 100
 SLEEP_TIME = 1
 MAX_WORKERS = 3
 
@@ -44,7 +44,6 @@ def get_first(res, *keys):
 def safe_date_literal(value):
     """Crée un Literal xsd:date si possible, sinon simple Literal"""
     try:
-        # DBpedia renvoie parfois juste l'année ou un format invalide
         datetime.strptime(value, "%Y-%m-%d")
         return Literal(value, datatype=XSD.date)
     except:
@@ -55,7 +54,9 @@ def safe_uri_or_literal(value):
     if value.startswith("http://") or value.startswith("https://"):
         return URIRef(value)
     else:
-        return Literal(value)
+        # On nettoie les accents et espaces pour créer une URI propre
+        clean = value.replace(" ", "_").replace("é", "e").replace("ó", "o").replace("í", "i")
+        return URIRef(f"http://dbpedia.org/resource/{clean}")
 
 # -----------------------------
 # Fonction pour interroger DBpedia
@@ -104,6 +105,13 @@ def process_player(player):
     # Ajouter type Footballer
     g_temp.add((player, RDF.type, EX.Footballer))
 
+    # Ajouter la NationalTeam locale déjà dans le TTL
+    for nt in g.objects(player, DBO.NationalTeam):
+        if isinstance(nt, Literal):
+            g_temp.add((player, DBO.NationalTeam, safe_uri_or_literal(str(nt))))
+        else:
+            g_temp.add((player, DBO.NationalTeam, nt))
+
     # Compléter avec DBpedia pour les autres propriétés
     results = query_dbpedia(player_name)
     for res in results:
@@ -136,8 +144,6 @@ def process_player(player):
         val = get_first(res, "team", "teamRaw")
         if val:
             g_temp.add((player, DBO.team, safe_uri_or_literal(val)))
-
-        break  # ne garder que le premier résultat
 
     return g_temp
 

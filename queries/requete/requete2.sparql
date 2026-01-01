@@ -1,0 +1,12 @@
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT (COUNT(DISTINCT ?player) AS ?nbDefenseursButteursPourUruguay)
+WHERE {
+  ?player a ex:Footballer ;
+          dbo:position dbr:Defender ;      # Défenseur
+          dbo:team dbr:Uruguay_national_football_team .     # Remplace par l'équipe de ton choix
+
+  ?goal ex:scoredBy ?player .
+}
