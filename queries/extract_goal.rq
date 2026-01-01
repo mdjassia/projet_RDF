@@ -11,13 +11,12 @@ CONSTRUCT {
         ex:scoredBy ?player ;
         ex:scoredIn ?match ;
         ex:goalMinute ?minuteVal ;
-        ex:penalty ?penaltyVal ;
-        ex:ownGoal ?ownGoalVal .
+        ex:penalty ?penaltyVal .
 }
 WHERE {
   # Nettoyage du nom du joueur pour créer un IRI valide
-  BIND(REPLACE(?scorer, "[^\\w]", "_") AS ?cleanName)
-  BIND(IRI(CONCAT("http://example.org/football/Player_", ?cleanName)) AS ?player)
+   BIND(REPLACE(?scorer, " ", "_") AS ?cleanName)
+  BIND(IRI(CONCAT("http://example.org/football/", ?cleanName)) AS ?player)
 
   # URI de l'équipe
   BIND(IRI(CONCAT("http://dbpedia.org/resource/", REPLACE(?team, " ", "_"))) AS ?teamURI)
@@ -38,6 +37,6 @@ WHERE {
 
   # Typage des valeurs
   BIND(xsd:integer(?minute) AS ?minuteVal)
-  BIND(xsd:boolean(?penalty) AS ?penaltyVal)
-  BIND(xsd:boolean(?own_goal) AS ?ownGoalVal)
+  BIND((?penalty) AS ?penaltyVal)
+ 
 }

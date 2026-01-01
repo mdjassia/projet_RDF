@@ -1,14 +1,15 @@
-from rdflib import Graph, URIRef, Namespace, RDF
+from rdflib import Graph, URIRef, Namespace, RDF, Literal, XSD
 from SPARQLWrapper import SPARQLWrapper, JSON
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 import time
 
 # -----------------------------
 # Config
 # -----------------------------
-INPUT_RDF = "schema/player.ttl"
-OUTPUT_RDF = "schema/players_enriched.ttl"
-BATCH_SIZE = 100
+INPUT_RDF = "schema/data/player.ttl"
+OUTPUT_RDF = "schema/data/players_enriched.ttl"
+BATCH_SIZE = 10
 SLEEP_TIME = 1
 MAX_WORKERS = 3
 
@@ -31,19 +32,56 @@ players = list(g.subjects(RDF.type, EX.Footballer))
 print(f"{len(players)} joueurs trouvés.")
 
 # -----------------------------
+# Helpers
+# -----------------------------
+def get_first(res, *keys):
+    """Retourne la première valeur trouvée dans le résultat DBpedia"""
+    for k in keys:
+        if k in res:
+            return res[k]["value"]
+    return None
+
+def safe_date_literal(value):
+    """Crée un Literal xsd:date si possible, sinon simple Literal"""
+    try:
+        # DBpedia renvoie parfois juste l'année ou un format invalide
+        datetime.strptime(value, "%Y-%m-%d")
+        return Literal(value, datatype=XSD.date)
+    except:
+        return Literal(value)
+
+def safe_uri_or_literal(value):
+    """Renvoie URIRef si c'est une URI, sinon un Literal"""
+    if value.startswith("http://") or value.startswith("https://"):
+        return URIRef(value)
+    else:
+        return Literal(value)
+
+# -----------------------------
 # Fonction pour interroger DBpedia
 # -----------------------------
 def query_dbpedia(player_name):
     dbp_iri = "http://dbpedia.org/resource/" + player_name.replace(" ", "_")
     query = f"""
-    SELECT ?birthDate ?birthPlace ?position ?deathDate ?deathPlace ?team
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dbr: <http://dbpedia.org/resource/>
+
+    SELECT ?birthDate ?birthDateRaw ?birthPlace ?birthPlaceRaw ?position ?positionRaw 
+           ?deathDate ?deathDateRaw ?deathPlace ?deathPlaceRaw ?team ?teamRaw
     WHERE {{
       OPTIONAL {{ <{dbp_iri}> dbo:birthDate ?birthDate. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:birthDate ?birthDateRaw. }}
       OPTIONAL {{ <{dbp_iri}> dbo:birthPlace ?birthPlace. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:birthPlace ?birthPlaceRaw. }}
       OPTIONAL {{ <{dbp_iri}> dbo:position ?position. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:position ?positionRaw. }}
       OPTIONAL {{ <{dbp_iri}> dbo:deathDate ?deathDate. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:deathDate ?deathDateRaw. }}
       OPTIONAL {{ <{dbp_iri}> dbo:deathPlace ?deathPlace. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:deathPlace ?deathPlaceRaw. }}
       OPTIONAL {{ <{dbp_iri}> dbo:team ?team. }}
+      OPTIONAL {{ <{dbp_iri}> dbp:team ?teamRaw. }}
     }}
     """
     sparql.setQuery(query)
@@ -63,26 +101,43 @@ def process_player(player):
     g_temp.bind("ex", EX)
     g_temp.bind("dbo", DBO)
 
-    # Ajouter type et NationalTeam locale
+    # Ajouter type Footballer
     g_temp.add((player, RDF.type, EX.Footballer))
-    for team in g.objects(player, DBO.NationalTeam):
-        g_temp.add((player, DBO.NationalTeam, team))
 
     # Compléter avec DBpedia pour les autres propriétés
     results = query_dbpedia(player_name)
     for res in results:
-        if "birthDate" in res:
-            g_temp.add((player, DBO.birthDate, URIRef(res["birthDate"]["value"])))
-        if "birthPlace" in res:
-            g_temp.add((player, DBO.birthPlace, URIRef(res["birthPlace"]["value"])))
-        if "position" in res:
-            g_temp.add((player, DBO.position, URIRef(res["position"]["value"])))
-        if "deathDate" in res:
-            g_temp.add((player, DBO.deathDate, URIRef(res["deathDate"]["value"])))
-        if "deathPlace" in res:
-            g_temp.add((player, DBO.deathPlace, URIRef(res["deathPlace"]["value"])))
-        if "team" in res:
-            g_temp.add((player, DBO.team, URIRef(res["team"]["value"])))
+        # birthDate
+        val = get_first(res, "birthDate", "birthDateRaw")
+        if val:
+            g_temp.add((player, DBO.birthDate, safe_date_literal(val)))
+
+        # birthPlace
+        val = get_first(res, "birthPlace", "birthPlaceRaw")
+        if val:
+            g_temp.add((player, DBO.birthPlace, safe_uri_or_literal(val)))
+
+        # position
+        val = get_first(res, "position", "positionRaw")
+        if val:
+            g_temp.add((player, DBO.position, safe_uri_or_literal(val)))
+
+        # deathDate
+        val = get_first(res, "deathDate", "deathDateRaw")
+        if val:
+            g_temp.add((player, DBO.deathDate, safe_date_literal(val)))
+
+        # deathPlace
+        val = get_first(res, "deathPlace", "deathPlaceRaw")
+        if val:
+            g_temp.add((player, DBO.deathPlace, safe_uri_or_literal(val)))
+
+        # team
+        val = get_first(res, "team", "teamRaw")
+        if val:
+            g_temp.add((player, DBO.team, safe_uri_or_literal(val)))
+
+        break  # ne garder que le premier résultat
 
     return g_temp
 
@@ -102,7 +157,7 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         for f in futures:
             g_batch += f.result()
 
-        # Écriture immédiate du lot pour visualiser le progrès
+        # Écriture immédiate du lot
         with open(OUTPUT_RDF, "ab") as f:
             f.write(g_batch.serialize(format="ttl").encode("utf-8"))
 

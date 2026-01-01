@@ -1,0 +1,39 @@
+PREFIX ex:  <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?match rdf:type ex:Match ;
+         dbo:homeTeam ?home ;
+         dbo:awayTeam ?away ;
+         dbo:date ?date .
+
+  ?goal rdf:type ex:Goal ;
+        ex:scoredIn ?match ;
+        ex:scoredBy ?player ;
+        ex:goalMinute ?minute .
+
+  ?player rdf:type ex:Footballer ;
+          dbo:NationalTeam ?team .
+}
+WHERE {
+  ?match rdf:type ex:Match ;
+         dbo:homeTeam ?home ;
+         dbo:awayTeam ?away ;
+         dbo:date ?date .
+         
+
+
+  FILTER(CONTAINS(STR(?match), "Match_2019-07-01_Tanzania_Algeria"))
+
+  OPTIONAL {
+    ?goal ex:scoredIn ?match ;
+          ex:scoredBy ?player ;
+          ex:goalMinute ?minute .
+  }
+
+  OPTIONAL {
+    ?player dbo:NationalTeam ?team .
+
+  }
+}
