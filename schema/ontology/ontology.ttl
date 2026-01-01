@@ -1,0 +1,96 @@
+@prefix ex: <http://example.org/football/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Class ---------------------------------------------------------------------------
+
+ex:Entity a rdfs:Class .
+
+ex:Person a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Footballer a rdfs:Class ; rdfs:subClassOf ex:Person .
+ex:Match a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Goal a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Team a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:NationalTeam a rdfs:Class ; rdfs:subClassOf ex:Team .
+ex:ClubTeam a rdfs:Class ; rdfs:subClassOf ex:Team .
+ex:Tournament a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Country a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Place a rdfs:Class ; rdfs:subClassOf ex:Entity .
+ex:Position a rdfs:Class ; rdfs:subClassOf ex:Entity .
+
+# Properties Goals ---------------------------------------------------------------------------
+
+ex:scoredIn a rdf:Property ;
+  rdfs:domain ex:Goal ;
+  rdfs:range ex:Match .
+
+ex:scoredBy a rdf:Property ;
+  rdfs:domain ex:Goal ;
+  rdfs:range ex:Footballer .
+
+ex:goalMinute a rdf:Property ;
+  rdfs:domain ex:Goal ;
+  rdfs:range xsd:integer .
+
+
+# Propreties Match ---------------------------------------------------------------------------
+dbo:homeTeam a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range ex:Team .
+dbo:awayTeam a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range ex:Team .
+
+dbo:tournament a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range ex:Tournament .
+
+dbo:country a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range ex:Country .
+
+dbo:date a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range xsd:date .
+
+dbo:homeScore a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range xsd:integer .
+dbo:awayScore a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range xsd:integer .
+ex:result a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range xsd:string .
+
+# Properties Player ---------------------------------------------------------------------------
+
+dbo:NationalTeam a rdf:Property ;
+  rdfs:domain ex:Footballer ;
+  rdfs:range  ex:NationalTeam .
+
+dbo:team a rdf:Property ;
+  rdfs:domain ex:Footballer ;
+  rdfs:range  ex:Team .
+
+dbo:birthDate a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:date .
+
+dbo:deathDate a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:date .
+
+dbo:birthPlace a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Place .
+
+dbo:deathPlace a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range  ex:Place .
+
+dbo:position a rdf:Property ;
+  rdfs:domain ex:Footballer ;
+  rdfs:range ex:Position .
