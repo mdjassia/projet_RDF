@@ -5,8 +5,8 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 SELECT (COUNT(DISTINCT ?player) AS ?nbDefenseursButteursPourUruguay)
 WHERE {
   ?player a ex:Footballer ;
-          dbo:position dbr:Defender ;      # Défenseur
-          dbo:team dbr:Uruguay_national_football_team .     # Remplace par l'équipe de ton choix
+          dbo:position dbr:Defender ;      
+          dbo:team dbr:Uruguay_national_football_team .   
 
   ?goal ex:scoredBy ?player .
 }
