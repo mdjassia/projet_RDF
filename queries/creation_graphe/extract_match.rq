@@ -33,7 +33,9 @@ WHERE {
   BIND(xsd:integer(?home_score) AS ?homeScore)
   BIND(xsd:integer(?away_score) AS ?awayScore)
 
-  BIND(dbr:Friendly_match AS ?tournamentURI)
+  # ---- ici on bind le tournoi depuis la colonne CSV ----
+  BIND(IRI(CONCAT("http://dbpedia.org/resource/", REPLACE(?tournament, " ", "_"))) AS ?tournamentURI)
+
   BIND(IRI(CONCAT("http://dbpedia.org/resource/", REPLACE(?country, " ", "_"))) AS ?countryURI)
 
   BIND(

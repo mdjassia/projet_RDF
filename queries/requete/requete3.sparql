@@ -1,0 +1,23 @@
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT DISTINCT ?player
+WHERE {
+  # Buts en qualifications
+  ?goal a ex:Goal ;
+        ex:scoredBy ?player ;
+        ex:scoredIn ?match .
+  ?match dbo:tournament dbr:FIFA_World_Cup_qualification .
+
+  # Joueurs français
+  ?player dbo:NationalTeam dbr:France .
+
+  # MAIS PAS en Coupe du Monde (phase finale)
+  MINUS {
+    ?goal2 a ex:Goal ;
+           ex:scoredBy ?player ;
+           ex:scoredIn ?match2 .
+    ?match2 dbo:tournament dbr:FIFA_World_Cup .
+  }
+}

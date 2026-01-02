@@ -1,6 +1,86 @@
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix ex: <http://example.org/football/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+
+ex:Jorginho a ex:Footballer ;
+    dbo:NationalTeam dbr:Italy ;
+    dbo:birthPlace dbr:Rio_de_Janeiro ;
+    dbo:birthDate "1991-12-20"^^xsd:date ;
+    dbo:position dbr:Midfielder ;
+    dbo:team dbr:Chelsea_FC .
+
+ex:Gonzalo_Higuaín a ex:Footballer ;
+    dbo:NationalTeam dbr:Argentina ;
+    dbo:birthPlace dbr:Paris ;
+    dbo:birthDate "1987-12-10"^^xsd:date ;
+    dbo:position dbr:Forward ;
+    dbo:team dbr:Inter_Miami_CF .
+
+ex:Riyad_Mahrez a ex:Footballer ;
+    dbo:NationalTeam dbr:Algeria ;
+    dbo:birthPlace dbr:Sarcelles ;
+    dbo:birthDate "1991-02-21"^^xsd:date ;
+    dbo:position dbr:Winger ;
+    dbo:team dbr:Manchester_City_FC .
+
+ex:Erling_Haaland a ex:Footballer ;
+    dbo:NationalTeam dbr:Norway ;
+    dbo:birthPlace dbr:Leeds ;
+    dbo:birthDate "2000-07-21"^^xsd:date ;
+    dbo:position dbr:Forward;
+    dbo:team dbr:Manchester_City_FC .
+
+ex:Kalidou_Koulibaly a ex:Footballer ;
+    dbo:NationalTeam dbr:Senegal ;
+    dbo:birthPlace dbr:Saint-Dié-des-Vosges ;
+    dbo:birthDate "1991-06-20"^^xsd:date ;
+    dbo:position dbr:Defender ;
+    dbo:team dbr:Napoli .
+
+ex:Hakim_Ziyech a ex:Footballer ;
+    dbo:NationalTeam dbr:Morocco ;
+    dbo:birthPlace dbr:Dronten ;
+    dbo:birthDate "1993-03-19"^^xsd:date ;
+    dbo:position dbr:Winger ;
+    dbo:team dbr:Chelsea_FC .
+
+ex:Thiago_Alcantara a ex:Footballer ;
+    dbo:NationalTeam dbr:Spain ;
+    dbo:birthPlace dbr:San_Paolo ;
+    dbo:birthDate "1991-04-11"^^xsd:date ;
+    dbo:position dbr:Midfielder ;
+    dbo:team dbr:Liverpool_FC .
+
+ex:Marcus_Thuram a ex:Footballer ;
+    dbo:NationalTeam dbr:France ;
+    dbo:birthPlace dbr:Parme ;
+    dbo:birthDate "1997-08-06"^^xsd:date ;
+    dbo:position dbr:Forward ;
+    dbo:team dbr:Borussia_Mönchengladbach .
+
+ex:Mario_Fernandes a ex:Footballer ;
+    dbo:NationalTeam dbr:Russia ;
+    dbo:birthPlace dbr:São_Paulo ;
+    dbo:birthDate "1990-09-19"^^xsd:date ;
+    dbo:position dbr:Defender ;
+    dbo:team dbr:PFC_CSKA_Moscow .
+
+ex:Julian_Araujo a ex:Footballer ;
+    dbo:NationalTeam dbr:Mexico ;
+    dbo:birthPlace dbr:Los_Angeles ;
+    dbo:birthDate "2001-08-13"^^xsd:date ;
+    dbo:position dbr:Defender ;
+    dbo:team dbr:LA_Galaxy .
+
+ex:Houssem_Aouar a ex:Footballer ;
+    dbo:NationalTeam dbr:Algeria ;
+    dbo:birthPlace dbr:Lyon ;
+    dbo:birthDate "1998-06-30"^^xsd:date ;
+    dbo:position dbr:Midfielder ;
+    dbo:team dbr:Olympique .
+
 
 ex:Adolfo_Baloncieri a ex:Footballer ;
     dbo:NationalTeam <http://dbpedia.org/resource/Italy> ;
@@ -28,11 +108,11 @@ ex:Albert_Hurgronje a ex:Footballer ;
 ex:Alberto_Marcovecchio a ex:Footballer ;
     dbo:NationalTeam <http://dbpedia.org/resource/Argentina> ;
     dbo:birthDate "1893-03-06"^^xsd:date ;
-    dbo:birthPlace <http://dbpedia.org/resource/Argentina_national_football_team>,
+    dbo:birthPlace 
         <http://dbpedia.org/resource/Avellaneda>,
         <http://dbpedia.org/resource/Buenos_Aires> ;
     dbo:deathDate "1958-02-28"^^xsd:date ;
-    dbo:deathPlace <http://dbpedia.org/resource/Argentina_national_football_team>,
+    dbo:deathPlace 
         <http://dbpedia.org/resource/Lanús> ;
     dbo:position <http://dbpedia.org/resource/Forward_(association_football)> ;
     dbo:team <http://dbpedia.org/resource/Argentina_national_football_team>,
@@ -41,10 +121,10 @@ ex:Alberto_Marcovecchio a ex:Footballer ;
 ex:Alberto_Ohaco a ex:Footballer ;
     dbo:NationalTeam <http://dbpedia.org/resource/Argentina> ;
     dbo:birthDate "1889-01-12"^^xsd:date ;
-    dbo:birthPlace <http://dbpedia.org/resource/Argentina_national_football_team>,
+    dbo:birthPlace 
         <http://dbpedia.org/resource/Avellaneda> ;
     dbo:deathDate "1950-03-08"^^xsd:date ;
-    dbo:deathPlace <http://dbpedia.org/resource/Argentina_national_football_team>,
+    dbo:deathPlace 
         <http://dbpedia.org/resource/Lomas_de_Zamora> ;
     dbo:position <http://dbpedia.org/resource/Forward_(association_football)> ;
     dbo:team <http://dbpedia.org/resource/Argentina_national_football_team>,
@@ -63,9 +143,8 @@ ex:Altino_Marcondes a ex:Footballer ;
 ex:Amílcar_Barbuy a ex:Footballer ;
     dbo:NationalTeam <http://dbpedia.org/resource/Brazil> ;
     dbo:birthDate "1893-03-29"^^xsd:date ;
-    dbo:birthPlace <http://dbpedia.org/resource/Brazil_national_football_team> ;
     dbo:deathDate "1965-08-24"^^xsd:date ;
-    dbo:deathPlace <http://dbpedia.org/resource/Brazil_national_football_team>,
+    dbo:deathPlace 
         <http://dbpedia.org/resource/São_Paulo> ;
     dbo:position <http://dbpedia.org/resource/Midfielder> ;
     dbo:team <http://dbpedia.org/resource/Brazil_national_football_team>,

@@ -1,0 +1,23 @@
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT ?player ?birthPlace ?birthCountry ?team
+WHERE {
+  {
+    SELECT ?player ?birthPlace ?team
+    WHERE {
+      ?player a ex:Footballer ;
+              dbo:birthPlace ?birthPlace ;
+              dbo:NationalTeam ?team .
+    }
+    LIMIT 100  
+    OFFSET 0  
+  }
+  SERVICE <https://dbpedia.org/sparql> {
+    ?birthPlace dbo:country ?birthCountry .
+  }
+
+  FILTER (?birthCountry != ?team)
+}
+ORDER BY ?player
