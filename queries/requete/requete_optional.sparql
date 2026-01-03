@@ -1,6 +1,20 @@
 PREFIX ex:  <http://example.org/football/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
-SELECT (COUNT(*) AS ?n) WHERE {
-  ?p a ex:Footballer ;
-     dbo:NationalTeam ?t .
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?player
+       (SAMPLE(?nt) AS ?nationalTeam)
+       (SAMPLE(?bp) AS ?birthPlace)
+       (SAMPLE(?bd) AS ?birthDate)
+WHERE {
+  ?player ?p ?o .
+
+  OPTIONAL {
+    ?player rdf:type ex:Footballer .
+    OPTIONAL { ?player dbo:NationalTeam ?nt . }
+    OPTIONAL { ?player dbo:birthPlace   ?bp . }
+    OPTIONAL { ?player dbo:birthDate    ?bd . }
+  }
 }
+GROUP BY ?player
+LIMIT 20
