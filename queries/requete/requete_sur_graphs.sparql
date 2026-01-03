@@ -1,0 +1,14 @@
+PREFIX : <http://example.org/ontology#>
+
+SELECT ?player (COUNT(?goal) AS ?nb)
+WHERE {
+  GRAPH <http://example.org/g/goals> {
+    ?goal :scorer ?player .
+  }
+  GRAPH <http://example.org/g/players> {
+    ?player :name ?name .
+  }
+}
+GROUP BY ?player
+ORDER BY DESC(?nb)
+LIMIT 10

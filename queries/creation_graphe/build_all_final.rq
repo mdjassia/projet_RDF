@@ -1,0 +1,29 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?s ?p ?o .
+}
+WHERE {
+  #Tout goal
+  { GRAPH <http://ex/goal> { ?s ?p ?o } }
+
+  UNION
+
+  #Tout match
+  { GRAPH <http://ex/match> { ?s ?p ?o } }
+
+  UNION
+
+  #Tout players_enriched (prioritaire)
+  { GRAPH <http://ex/players_enriched> { ?s ?p ?o } }
+
+  UNION
+
+  #player uniquement si le sujet n'existe pas dans players_enriched
+  {
+    GRAPH <http://ex/player> { ?s ?p ?o }
+    FILTER NOT EXISTS {
+      GRAPH <http://ex/players_enriched> { ?s ?anyP ?anyO }
+    }
+  }
+}

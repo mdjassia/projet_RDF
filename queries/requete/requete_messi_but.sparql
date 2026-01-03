@@ -1,0 +1,16 @@
+PREFIX ex: <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (COUNT(?goal) AS ?totalGoals)
+       (SUM(IF(LCASE(STR(?penalty)) = "true", 1, 0)) AS ?penaltyGoals)
+       (SUM(IF(LCASE(STR(?penalty)) = "false", 1, 0)) AS ?nonPenaltyGoals)
+WHERE {
+  ?goal a ex:Goal ;
+        ex:scoredBy ex:Lionel_Messi ;
+        ex:scoredIn ?match ;
+        ex:penalty ?penalty .
+
+  ?match dbo:date ?date .
+  FILTER (?date >= "2000-01-01"^^xsd:date)
+}

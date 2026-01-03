@@ -1,0 +1,6 @@
+PREFIX ex:  <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT (COUNT(*) AS ?n) WHERE {
+  ?p a ex:Footballer ;
+     dbo:NationalTeam ?t .
+}

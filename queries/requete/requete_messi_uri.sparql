@@ -1,0 +1,7 @@
+PREFIX ex: <http://example.org/football/>
+SELECT DISTINCT ?player
+WHERE {
+  ?g a ex:Goal ; ex:scoredBy ?player .
+  FILTER(CONTAINS(LCASE(STR(?player)), "messi"))
+}
+LIMIT 50
