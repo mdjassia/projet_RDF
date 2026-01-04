@@ -64,6 +64,13 @@ dbo:awayScore a rdf:Property ;
 ex:result a rdf:Property ;
   rdfs:domain ex:Match ;
   rdfs:range xsd:string .
+ex:involvesTeam a rdf:Property ;
+  rdfs:domain ex:Match ;
+  rdfs:range  ex:Team .
+
+dbo:homeTeam rdfs:subPropertyOf ex:involvesTeam .
+dbo:awayTeam rdfs:subPropertyOf ex:involvesTeam .
+
 
 # Properties Player ---------------------------------------------------------------------------
 
@@ -94,3 +101,10 @@ dbo:deathPlace a rdf:Property ;
 dbo:position a rdf:Property ;
   rdfs:domain ex:Footballer ;
   rdfs:range ex:Position .
+
+ex:playsFor a rdf:Property ;
+  rdfs:domain ex:Footballer ;
+  rdfs:range  ex:Team .
+
+dbo:team rdfs:subPropertyOf ex:playsFor .
+dbo:NationalTeam rdfs:subPropertyOf ex:playsFor .
