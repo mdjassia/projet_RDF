@@ -1,12 +1,13 @@
-PREFIX football: <http://example.org/football/>
+PREFIX ex: <http://example.org/ />
 
 SELECT DISTINCT ?match ?p1 ?p2
 WHERE {
-  GRAPH <http://example.org/g/goals> {
-    ?p1 ( ^football:scoredBy / football:scoredIn ) ?match .
-    ?p2 ( ^football:scoredBy / football:scoredIn ) ?match .
+  GRAPH <http://ex/goal> {
+    ?p1 ( ^ex:scoredBy / ex:scoredIn ) ?match .
+    ?p2 ( ^ex:scoredBy / ex:scoredIn ) ?match .
   }
+
   FILTER(?p1 != ?p2)
   FILTER(STR(?p1) < STR(?p2))
 }
-LIMIT 20
+LIMIT 10

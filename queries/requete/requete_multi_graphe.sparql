@@ -2,14 +2,14 @@ PREFIX football: <http://example.org/football/>
 
 SELECT ?match (COUNT(?goal) AS ?nbGoals)
 WHERE {
-  GRAPH <http://example.org/g/goals> {
+  GRAPH <http://ex/goal> {
     ?goal a football:Goal ;
           football:scoredIn ?match .
   }
-  GRAPH <http://example.org/g/matches> {
+  GRAPH <http://ex/match> {
     ?match ?p ?o .
   }
 }
 GROUP BY ?match
-ORDER BY DESC(?nbGoals)
+ORDER BY (?nbGoals)
 LIMIT 10

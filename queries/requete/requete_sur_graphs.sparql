@@ -2,7 +2,7 @@ PREFIX football: <http://example.org/football/>
 
 SELECT ?player (COUNT(?goal) AS ?nb)
 WHERE {
-  GRAPH <http://example.org/g/goals> {
+  GRAPH <http://ex/goal> {
     ?goal a football:Goal ;
           football:scoredBy ?player .
   }
