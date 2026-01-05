@@ -1,0 +1,15 @@
+PREFIX ex:  <http://example.org/football/>
+
+SELECT DISTINCT ?player ?team (IF(BOUND(?isNT), "NationalTeam", "Team") AS ?teamKind)
+WHERE {
+  # Ces 2 patterns ne marche que si l'ontologie est appliquée
+  # team/NationalTeam -> ex:playsFor (subPropertyOf)
+  # NationalTeam ->Team(subClassOf)
+  #domain/range de playsFor peut inféré les types
+
+  ?player ex:playsFor ?team .
+  ?player a ex:Footballer .
+  ?team a ex:Team .
+  OPTIONAL { ?team a ex:NationalTeam . BIND(true AS ?isNT) }
+}
+LIMIT 50

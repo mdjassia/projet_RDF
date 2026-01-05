@@ -1,0 +1,8 @@
+PREFIX ex:  <http://example.org/football/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?player ?team
+WHERE {
+  ?player ex:playsFor ?team .
+}
+LIMIT 30

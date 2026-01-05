@@ -1,0 +1,16 @@
+PREFIX ex:  <http://example.org/football/>
+
+SELECT DISTINCT ?player ?team ?match
+WHERE {
+  #lien Goal->Player+Goal->Match (datasets goal+match)
+  ?goal ex:scoredBy ?player ;
+  ex:scoredIn ?match .
+
+  ?player ex:playsFor ?team .
+
+  #raisonnement (subclass+domain/range)
+  ?player a ex:Footballer .
+  ?team a ex:Team .
+  ?match a ex:Match .
+}
+LIMIT 10
